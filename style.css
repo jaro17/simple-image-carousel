@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #717171;
+    --transition-speed: 0.5s;
+    --background-color: rgba(0,0,0,0.65);
+}
+
+body {
+    font-family: Poppins, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 2rem auto;
+    font-weight: 100;
+    font-size: 3rem;
+}
+
+.carousel-container {
+    position: relative;
+    max-width: 43.75rem;
+    margin: 0 auto;
+}
+
+.slide {
+    display: none;
+}
+
+.slide:first-child {
+    display: block;
+}
+
+img {
+    width: 100%;
+}
+
+.numberText {
+    position: absolute;
+    right: 0;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+    padding: .7rem;
+}
+
+.text {
+    position: relative;
+    margin-top: -3rem;
+    text-align: center;
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding:.6rem;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    margin-top: -1rem;
+    background-color: transparent;
+    color: var(--primary-color);
+    font-size: 1rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: var(--background-color);
+    cursor: pointer;
+    transition: background-color .6s ease;
+}
+
+.next-btn {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev-btn:active,
+.next-btn:active {
+    color: var(--secondary-color);
+}
+
+.dots-container {
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    background-color: #ddd;
+    height: 1rem;
+    width: 1rem;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 2rem .3rem;
+    transition: background-color var(--transition-speed) ease-out;
+}
+
+.dot:hover,
+.active {
+    background-color: var(--secondary-color);
+}
+
+.fade {
+    transition: fade var(--transition-speed) ease-in-out
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.2;
+    }
+    to {
+        opacity: 1;
+    }
+}
